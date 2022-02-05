@@ -9,17 +9,15 @@ function App() {
       <Avatar img="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Danny_DeVito_cropped_and_edited_for_brightness.jpg/514px-Danny_DeVito_cropped_and_edited_for_brightness.jpg" />
       <h1 className="heading">Ismerősök</h1>
 
-      {contracts.map(function (contact) {
-        return (
-          <Card
-            key={contact.id}
-            name={contact.name}
-            img={contact.imgURL}
-            tel={contact.phone}
-            email={contact.email}
-          />
-        );
-      })}
+      {contracts.map((contact) => (
+        <Card
+          key={contact.id}
+          name={contact.name}
+          img={contact.imgURL}
+          tel={contact.phone}
+          email={contact.email}
+        />
+      ))}
     </div>
   );
 }
